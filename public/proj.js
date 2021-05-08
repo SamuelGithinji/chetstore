@@ -2,35 +2,35 @@ let carts = document.querySelectorAll('.add-cart');
 let products = [
     {
       name: 'stratocaster',
-      tag: 'guitar1',
+      tag: 'stratocaster',
       price: 15,
       inCart: 0  
     }, 
     {
         name: 'telecaster',
-        tag: 'guitar2',
+        tag: 'telecaster',
         price: 20,
         inCart: 0 
       }, 
       {
         name: 'fender',
-        tag: 'guitar3',
+        tag: 'fender',
         price: 25,
         inCart: 0
       }, 
       {
         name: 'gibson',
-        tag: 'guitar2',
+        tag: 'gibson',
         price: 30,
         inCart: 0  
       },  {
         name: 'hamburker',
-        tag: 'guitar2',
+        tag: 'hamburker',
         price: 35,
         inCart: 0 
       },  {
         name: 'martial',
-        tag: 'guitar2',
+        tag: 'martial',
         price: 40,
         inCart: 0
       }, 
@@ -100,42 +100,36 @@ function totalcost(product){
     localStorage.setItem("totalCost", product.price);
    }  
   }
-function displayCart(){
-  let cartItems = localStorage.getItem("productsInCart");
-  cartItems = JSON.parse(cartItems);
-  let productContainer = document.querySelector
-  (".products");
-  let cartCost = localStorage.getItem('totalCost');
-       if(cartItems && productContainer){
-   productContainer.innerHTML = '';
-   Object.values(cartItems).map(item => {
-     productContainer.innerHTML += `
-     <div class="product">
-     <ion-icon name ="close-circle"></ion-icon>
-     <img class="img" src="images/${item.tag}.jpg">
-     <span>${item.name}</span>
-     </div>
-     <div class="price">${item.price}</div>
-     <div class="quantity">
-     <ion-icon name="chevron-back-outline"></ion-icon>     
-     <span>${item.inCart}</span>
-     <ion-icon name="chevron-forward-outline"></ion-icon>
-          </div>
-     <div class="total1">
-     $${item.inCart * item.price}
-     </div>
-     `});
-     productContainer.innerHTML +=`
-     <div class="basketTotalContainer">
-     <h4 class="basketTotalTitle"> 
-     basket Total
-     </h4>
-     <h4 class="basketTotal">
-     $${cartCost}
-     </h4>
-     `
-   }
-}
-displayCart();
+
+  function displayCart(){
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector
+    (".products");
+    if(cartItems && productContainer )
+    {
+      productContainer.innerHTML = '';
+      Object.values(cartItems).map(item => {
+// productContainer.innerHTML += `
+  
+// `
+      });
+    }
+  }
+
 onLoadCartNumbers();
- 
+displayCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+

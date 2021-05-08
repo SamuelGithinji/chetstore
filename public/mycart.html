@@ -4,40 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myproject.css">
-    <title>chet store</title>
+    <!-- <link rel="stylesheet" href="myproject.css"> -->
+    <link rel="stylesheet" href="mycart.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <div class = "headder">
-          <nav>
-              <h1>this is the home page</h1>
-               <ul>
+        <div class = "header_cart">
+            <nav>rfgr
+                <h1>View your cart</h1>
+                <ul>
                     <li><a href="myproject.html">Home</a></li>
-                     <li><a href="a">About</a></li>
-                       <li class = "cart">
-                      <a href="mycart.html">
-                        <ion-icon name="basket"></ion-icon>cart<span>0</span>
-                      </a>
-                      </li>
-                  </ul>
+                    <li><a href="a">About</a></li>
+                    <li class = "cart">
+                    <a href="mycart.html">
+                    <ion-icon name="basket"></ion-icon>cart&ensp;<span id = "cartTotal">0</span>
+                    </a>
+                    </li>
+
+                </ul>
             </nav>
         </div>
     </header>
-   
- <div class="products-container">
-     <div class="product-header">
-         <h5 class="product-title">PRODUCT</h5>
-         <h5 class="price">PRICE</h5>
-         <h5 class="quantity">QUANTITY</h5>
-         <h5 class="total">TOTAL</h5>
+<div class="products-container">
+    <div class="product-header" style="display: none;">
+        <h5 class="product-title">PRODUCT</h5>
+        <h5 class="price">PRICE</h5>
+        <h5 class="quantity">QUANTITY</h5>
+        <h5 class="total">TOTAL</h5> 
+    </div>
+    <div class="products">
+        <div class="product">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+            </table>
+            <p class = "p">Total cost: <span class = "t-cost"></span></p>
         </div>
-        <div class="products">
-
-        </div>
- </div>
- <script src = "proj.js"></script>  
- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </div>
+</div>
+        <script src = "mycart.js"></script>
 
 </body>
 </html>
