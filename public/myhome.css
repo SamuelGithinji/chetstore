@@ -4,6 +4,8 @@ body {
     font-family: arial;
     font-size: 1em;
     overflow-x: hidden;
+    background: #001f3f;
+
 }
 
 header {
@@ -49,6 +51,9 @@ header li a:hover {
 .products-container {
     margin-top: 100px;
     padding: 4rem 1rem;
+    display: inline-block;
+    flex-direction: row;
+    width: 100%;
 }
 .product-header {
     width: 100%;
@@ -59,16 +64,16 @@ header li a:hover {
     margin: 1rem;
     padding: 1rem;
 }
-.products-container .products {
-    width: 100%;
-    margin-top: 2rem;
-}
+
+
 .product {
     max-height: 170px;
     /* overflow: hidden; */
+    
 }
 .img-container {
-    max-height: 140px;
+    max-height: 120px;
+    height: 100px;
     width: 100%;
     overflow: hidden;
 }
@@ -77,12 +82,18 @@ header li a:hover {
     height: 100%;
 }
 .content {
-    width: 50%;
-    margin: 2rem auto;
+    width: 15%;
+    margin: 0;
+    margin-right: 20px;
+    margin-top: 20px;
     background-color: rgb(102, 51, 153);
     padding: 1rem;
     border-radius: 7px;
+    display: inline-block;
     color: rgb(255, 255, 255);
+    max-height: 300px;
+    min-height: 250px;
+    overflow: hidden;
 }
 .btn {
     margin-top: 1rem;

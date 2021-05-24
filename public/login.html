@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ChetStore</title>
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body id = "body">
+    <section>
+        <span id="alert"></span>
+        <div class="leftbox form-leftbox">
+            <div class="content form-content">
+                <h1>ChetStore</h1>
+            <form action="" class="auth-form" id = "login-form">
+                <h3>Login to acces your account</h3>
+                <div class="form-content">
+                    <div class="input-section">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                    <div class="input-section">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="input-section">
+                        <button id="submit">Log In</button>
+                    </div>
+                    <span>Don't have an account?<br/><a href="./signup.html">Create one here</a></span>
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <footer id = "footer_">
+        <div class="footer-bottom">
+            <p>copyright &copy; <span id = "showYear"></span> chetstore. designed by <span>sammy githinji</span></p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+    
+            </ul>
+        </div>
+</footer>
+<script>
+    document.querySelector("#showYear").textContent = new Date().getFullYear();
+    console.log("");
+</script>
+<script src = "login.js"></script>
+</body>
+</html>

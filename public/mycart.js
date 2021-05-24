@@ -37,6 +37,10 @@ btnArr.forEach((btn, i) => {
         let myCartPrices = [];
         let myCartQuantities = [];
 
+        if(!quantities) return alert("Quantity is required");
+
+        if(!(/^[0-9]/).test(quantities)) return alert("Quantity must be a number");
+
         if(localStorage.getItem(`cartItemImage`) !== null) { 
             console.log(JSON.parse(localStorage.getItem(`cartItemImage`)))
             if(JSON.parse(localStorage.getItem(`cartItemImage`)).length > 0) {
@@ -88,12 +92,14 @@ const cartItemsTotal = JSON.parse(localStorage.getItem(`cartItemImage`));
 
 showCartItems.textContent = cartItemsTotal.length;
 
+
+
 // end add to cart event
 
 // view cart event => mycart.html
 
-const cartTable = document.querySelector(`table`);
-const totalCost = document.querySelector(`.t-cost`);
+let cartTable = document.querySelector(`table`);
+let totalCost = document.querySelector(`.t-cost`);
 
 const cartItemImage__ = JSON.parse(localStorage.getItem(`cartItemImage`));
 const cartItemName__ = JSON.parse(localStorage.getItem(`cartItemName`));
@@ -104,6 +110,8 @@ let costOfCart = 0;
 
 cartItemImage__.forEach((image, i) => {
     console.log(image);
+    if(!cartTable) cartTable = document.createElement("table");
+    if(!totalCost) totalCost = 0;
     cartTable.innerHTML += `
         <tbody>
         <tr>

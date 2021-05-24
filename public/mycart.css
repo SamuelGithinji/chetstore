@@ -4,6 +4,8 @@ body {
     font-family: arial;
     font-size: 1em;
     overflow-x: hidden;
+    background: #001f3f;
+
 }
 
 header {
@@ -50,6 +52,7 @@ header li a:hover {
 .products-container {
     margin-top: 100px;
     padding: 4rem;
+    color:rgb(17, 245, 85);
 }
 .product-header {
     width: 100%;
@@ -63,6 +66,8 @@ header li a:hover {
 .products-container .products {
     width: 100%;
     margin-top: 2rem;
+}
+
 }
 .product {
     max-height: 170px;
@@ -85,6 +90,7 @@ table td {
     max-width: 100px;
     overflow: hidden;
     text-align: center;
+    font-weight: bold;
 }
 .p {
     float: right;
